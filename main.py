@@ -1,10 +1,11 @@
 import psycopg2
+from psycopg2.extensions import connection
 
 
 def main() -> int:
     print("Hello World")
 
-    conn = psycopg2.connect(
+    conn: connection = psycopg2.connect(
         host="dpg-db3qr88m7kps73fnpveg-a.virginia-postgres.render.com",
         port=5432,
         dbname="dbfall26",
